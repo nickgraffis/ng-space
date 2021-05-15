@@ -62,9 +62,7 @@ html.dark {
   --fg: #555;
   --fg-deep: #222;
   --fg-deeper: #000;
-
-  margin-top: 85px;
-  
+    
   color: var(--fg);
 
   a {

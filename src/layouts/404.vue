@@ -11,7 +11,6 @@ stars.forEach(star => starStyle.push({ top: `${Math.floor(Math.random() * 100)}%
 </script>
 
 <template>
-  <Blob />
   <div class="h-screen w-screen -top-[40rem] -left-[30rem] absolute">
   </div>
   <div class="w-screen h-screen fixed font-bold text-dracula text-10xl flex items-center justify-center">
