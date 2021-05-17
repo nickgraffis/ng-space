@@ -17,7 +17,7 @@ const projects: any = router.getRoutes().filter((route: any) => route.meta.front
   .splice(0, props.length || router.getRoutes().filter((route: any) => route.meta.frontmatter?.tech).length)
 </script>
 <template>
-  <ul class="grid grid-cols-4 gap-4">
+  <div class="grid grid-cols-4 gap-4">
     <div v-for="project in projects" :key="project.meta.frontmatter.order" :class="project.meta.frontmatter.size" class="group col-span-4 cursor-pointer rounded-md dark:border-cullen border-nosferatu border-2 flex-col flex space-y-4 items-center justify-center p-4">
       <Clown v-if="project.meta.frontmatter.icon === 'Clown'" />
       <DB v-else-if="project.meta.frontmatter.icon === 'DB'" />
@@ -40,6 +40,7 @@ const projects: any = router.getRoutes().filter((route: any) => route.meta.front
           />
           <div class="flex items-center justify-end">
             <a
+              rel="noopener noreferrer"
               target="_blank"
               class="icon-btn animate hover:animate-spin"
               :href="project.meta.frontmatter.link"
@@ -50,5 +51,5 @@ const projects: any = router.getRoutes().filter((route: any) => route.meta.front
         </div>
       </div>
     </div>
-  </ul>
+  </div>
 </template>

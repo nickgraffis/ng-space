@@ -51,11 +51,11 @@ const flipAvatar = () => {
         @click="flipAvatar"
       />
     </div>
-    <ul class="flex w-full h-full space-x-4 flex-grow items-center justify-end">
+    <div class="flex w-full h-full space-x-4 flex-grow items-center justify-end">
       <NavLink to="/" class="hidden lg:inline-flex flex-grow">
         Nick Graffis
       </NavLink>
-      <li class="relative hidden lg:inline-flex">
+      <div class="relative hidden lg:inline-flex">
         <div class="group flex items-center space-x-2 cursor-pointer" @click="dropAbout = !dropAbout">
           <span class="transition-all duration-300 dark:group-hover:text-dracula group-hover:text-draculaDark">{{ t(`about`) }}</span>
           <akar-icons:chevron-right class="transition-all duration-300 h-4 w-4 transform dark:group-hover:text-dracula group-hover:text-draculaDark" :class="{ 'rotate-90': dropAbout }" />
@@ -77,7 +77,7 @@ const flipAvatar = () => {
             {{ t(`water-polo`) }}
           </li>
         </ul>
-      </li>
+      </div>
       <NavLink to="/" class="inline-flex lg:hidden">
         <bx-bx-home-heart />
       </NavLink>
@@ -103,6 +103,6 @@ const flipAvatar = () => {
         <Vampire v-if="isDark" />
         <Sun v-else />
       </a>
-    </ul>
+    </div>
   </nav>
 </template>

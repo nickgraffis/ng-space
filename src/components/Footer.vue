@@ -56,10 +56,14 @@ const toggleLocales = (event: Event) => {
       </a>
     </nav>
     <p class="w-full justify-center text-center mt-8 flex-shrink-0 flex items-center space-x-2 text-xs lg:text-base text-center text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-200">
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0 2021 &copy; Nick Graffis.</a>
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0 2021 &copy; Nick Graffis.</a>
     </p>
     <div class="flex flex-col items-center justify-center max-w-3xl pt-8 mx-auto lg:space-x-6 space-y-6 lg:flex-row lg:space-y-0">
-      <router-link class="flex items-center justify-center rounded-full text-gray-500 dark:text-gray-300 hover:text-buffyDark dark:hover:text-buffy" to="/love">
+      <router-link
+        aria-label="Love"
+        class="flex items-center justify-center rounded-full text-gray-500 dark:text-gray-300 hover:text-buffyDark dark:hover:text-buffy"
+        to="/love"
+      >
         <ant-design:heart-filled class="h-5 w-5 lg:h-6 lg:w-6" />
       </router-link>
       <div class="flex space-x-4 flex-grow items-center">
