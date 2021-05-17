@@ -15,6 +15,6 @@ tech: [
         name: 'Machine Learning'
     },
 ]
-size: 2
+size: 'lg:col-span-2'
 order: 4
 ---
