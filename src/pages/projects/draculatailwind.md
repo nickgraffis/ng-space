@@ -10,6 +10,7 @@ tech: [
         name: 'JavaScript'
     },
 ]
-size: 2
+size: 'lg:col-span-2'
 order: 3
+link: 'https://draculatheme.com/tailwind'
 ---

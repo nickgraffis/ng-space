@@ -16,6 +16,7 @@ html.dark {
 a {
   color: inherit;
   text-decoration: inherit;
+  @apply transition-colors duration-300;
 }
 
 #nprogress {
@@ -34,17 +35,10 @@ a {
   height: 2px;
 }
 
-.btn {
-  @apply px-4 py-1 rounded inline-block
-    bg-teal-600 text-white cursor-pointer
-    hover:bg-teal-700
-    disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50;
-}
-
 .icon-btn {
   @apply inline-block cursor-pointer select-none
     opacity-75 transition duration-200 ease-in-out
-    hover:opacity-100 hover:text-teal-600;
+    hover:opacity-100;
   font-size: 0.9em;
 }
 
@@ -52,13 +46,40 @@ a {
   -ms-grid-column-span: span 4 / span 4;
   grid-column: span 4 / span 4;
 }
+@media (min-width: 1024px) { 
+  .lg\:col-span-4 {
+    -ms-grid-column-span: span 4 / span 4;
+    grid-column: span 4 / span 4;
+  }
+}
+
+@media (min-width: 1024px) { 
+  .lg\:col-span-3 {
+    -ms-grid-column-span: span 3 / span 3;
+    grid-column: span 3 / span 3;
+  }
+}
 .col-span-3 {
   -ms-grid-column-span: span 3 / span 3;
   grid-column: span 3 / span 3;
 }
+
+@media (min-width: 1024px) { 
+  .lg\:col-span-2 {
+    -ms-grid-column-span: span 2 / span 2;
+    grid-column: span 2 / span 2;
+  }
+}
 .col-span-2 {
   -ms-grid-column-span: span 2 / span 2;
   grid-column: span 2 / span 2;
+}
+
+@media (min-width: 1024px) { 
+  .lg\:col-span-1 {
+    -ms-grid-column-span: span 1 / span 1;
+    grid-column: span 1 / span 1;
+  }  
 }
 .col-span-1 {
   -ms-grid-column-span: span 1 / span 1;

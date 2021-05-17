@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="w-6 h-6"
+    class="lg:w-6 lg:h-6 h-5 w-5"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     aria-hidden="true"

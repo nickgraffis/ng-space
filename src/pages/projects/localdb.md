@@ -10,6 +10,7 @@ tech: [
         name: 'JavaScript'
     },
 ]
-size: 1
+size: 'lg:col-span-1'
 order: 2
+link: 'https://github.com/localdb'
 ---

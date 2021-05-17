@@ -35,6 +35,7 @@ tech: [
         name: 'Socket.io'
     },
 ]
-size: 3
+size: 'lg:col-span-3'
 order: 1
+link: 'https://babelbox.heroku.app'
 ---

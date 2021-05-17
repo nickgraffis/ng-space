@@ -4,7 +4,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     aria-hidden="true"
     focusable="false"
-    class="w-6 h-6"
+    class="lg:w-6 lg:h-6 h-5 w-5"
     style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
     preserveAspectRatio="xMidYMid meet"
     viewBox="0 0 36 36"
