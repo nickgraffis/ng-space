@@ -8,9 +8,9 @@ const toggleLocales = (event: Event) => {
 </script>
 
 <template>
-  <footer class="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-">
+  <footer class="py-12 overflow-hidden max-w-7xl sm:px-6 lg:px-">
     <nav
-      class="text-gray-500 dark:text-gray-300flex flex-wrap items-baseline justify-center text-sm lg:text-base space-x-8 space-y-2 lg:space-y-0"
+      class="text-gray-500 dark:text-gray-300 flex flex-wrap items-baseline justify-center text-sm lg:text-base space-x-8 space-y-2 lg:space-y-0"
       aria-label="Footer"
     >
       <router-link class="hover:text-gray-900 dark:hover:text-gray-200 " to="/about">
