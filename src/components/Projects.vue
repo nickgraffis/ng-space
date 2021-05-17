@@ -17,15 +17,14 @@ const router = useRouter()
 const projects = router.getRoutes().filter(route => route.meta.frontmatter?.tech)
   .sort((a, b) => a.meta.frontmatter.order - b.meta.frontmatter.order)
   .splice(0, props.length || router.getRoutes().filter(route => route.meta.frontmatter?.tech).length)
-
-const carefulEval = (exp) => {
-  return eval(exp)
-}
 </script>
 <template>
   <ul class="grid grid-cols-4 gap-4">
     <div v-for="(project, index) in projects" :class="'col-span-' + project.meta.frontmatter.size" class="group cursor-pointer rounded-md dark:border-cullen border-nosferatu border-2 flex-col flex space-y-4 items-center justify-center p-4">
-      <component :is="carefulEval(project.meta.frontmatter.icon)"></component>
+      <Clown v-if="project.meta.frontmatter.icon === 'Clown'" />
+      <DB v-else-if="project.meta.frontmatter.icon === 'DB'" />
+      <VampireHover v-else-if="project.meta.frontmatter.icon === 'VampireHover'" />
+      <Hadena v-else />
       <div>
         <p class="font-semibold text-center">
           {{ project.meta.frontmatter.title }}
