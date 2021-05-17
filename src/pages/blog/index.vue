@@ -4,7 +4,8 @@ import { useRouter } from 'vue-router'
 import { formatDate } from '../../logic'
 const lang = ref('en')
 const router = useRouter()
-const routes = router.getRoutes()
+const routes = router.getRoutes().filter(route => route.meta.frontmatter?.date)
+  .sort((a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date))
 const posts = computed(() =>
   routes.filter(i => !i.path.endsWith('.html') && i.meta.frontmatter?.lang === lang.value),
 )
@@ -30,7 +31,7 @@ const posts = computed(() =>
             {{ route.meta.frontmatter.description }}
           </div>
           <div class="time opacity-50 text-sm -mt-1">
-            {{ route.meta.frontmatter.date }} <span v-if="route.meta.frontmatter.duration">· {{ route.meta.frontmatter.duration }}</span>
+            {{ formatDate(route.meta.frontmatter.date) }} <span v-if="route.meta.frontmatter.duration">· {{ route.meta.frontmatter.duration }}</span>
           </div>
         </div>
       </li>

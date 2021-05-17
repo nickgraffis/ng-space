@@ -6,6 +6,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  @apply bg-cullen;
 }
 
 html.dark {
@@ -45,4 +46,21 @@ a {
     opacity-75 transition duration-200 ease-in-out
     hover:opacity-100 hover:text-teal-600;
   font-size: 0.9em;
+}
+
+.col-span-4 {
+  -ms-grid-column-span: span 4 / span 4;
+  grid-column: span 4 / span 4;
+}
+.col-span-3 {
+  -ms-grid-column-span: span 3 / span 3;
+  grid-column: span 3 / span 3;
+}
+.col-span-2 {
+  -ms-grid-column-span: span 2 / span 2;
+  grid-column: span 2 / span 2;
+}
+.col-span-1 {
+  -ms-grid-column-span: span 1 / span 1;
+  grid-column: span 1 / span 1;
 }

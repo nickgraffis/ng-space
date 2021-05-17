@@ -12,6 +12,7 @@ specifiers:
   '@vue/server-renderer': ^3.0.11
   '@vueuse/core': ^4.9.2
   '@vueuse/head': ^0.5.1
+  '@windicss/animations': ^1.0.8
   cross-env: ^7.0.3
   eslint: ^7.26.0
   fs-extra: ^10.0.0
@@ -19,6 +20,7 @@ specifiers:
   markdown-it-anchor: ^7.1.0
   markdown-it-link-attributes: ^3.0.0
   markdown-it-prism: ^2.1.6
+  markdown-it-twemoji: ^1.5.0
   nprogress: ^0.2.0
   pnpm: ^6.3.0
   prism-theme-vars: ^0.2.2
@@ -41,9 +43,11 @@ dependencies:
   '@iconify/iconify': 2.0.1
   '@vueuse/core': 4.9.2_vue@3.0.11
   '@vueuse/head': 0.5.1_vue@3.0.11
+  '@windicss/animations': 1.0.8
   fs-extra: 10.0.0
   markdown-it-anchor: 7.1.0
   markdown-it-link-attributes: 3.0.0
+  markdown-it-twemoji: 1.5.0
   nprogress: 0.2.0
   prism-theme-vars: 0.2.2
   vue: 3.0.11
@@ -1913,6 +1917,11 @@ packages:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
+    dev: false
+
+  /@windicss/animations/1.0.8:
+    resolution: {integrity: sha512-2edYQdTVh3koQYmZQqXU2hPIvAJRjkqOP/FpzCQv3U0bbtEgmLk3UeHYHzo9jSL5obV12pEhJuAHIzKo6cdRyw==}
+    deprecated: rename package
     dev: false
 
   /@windicss/plugin-utils/0.15.10:
@@ -4753,6 +4762,12 @@ packages:
       prismjs: 1.23.0
     dev: true
 
+  /markdown-it-twemoji/1.5.0:
+    resolution: {integrity: sha512-cGNf/WKN98S4lGAzbAli5qiFwf+DmAykhB5ytzVpIzYZ49yLo2NGdEVFQk5do5w3NjeZJ0L5A9ViOEovJ1+y6Q==}
+    optionalDependencies:
+      twemoji: 11.3.0
+    dev: false
+
   /markdown-it/12.0.6:
     resolution: {integrity: sha512-qv3sVLl4lMT96LLtR7xeRJX11OUFjsaD5oVat2/SNBIb21bJXwal2+SklcRbTwGwqWpWH/HRtYavOoJE+seL8w==}
     hasBin: true
@@ -6582,6 +6597,11 @@ packages:
   /tweetnacl/0.14.5:
     resolution: {integrity: sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=}
     dev: true
+
+  /twemoji/11.3.0:
+    resolution: {integrity: sha512-xN/vlR6+gDmfjt6LInAqwGAv3Agwrmzx5TD1jEFwKS19IOGDrX0/3OB8GP1wUYPVIdkaer5hw6qd+52jzvz0Lg==}
+    dev: false
+    optional: true
 
   /type-check/0.3.2:
     resolution: {integrity: sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=}

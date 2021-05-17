@@ -5,16 +5,19 @@ import { useI18n } from 'vue-i18n'
 const router = useRouter()
 const { t } = useI18n()
 
-const stars = new Array(20).fill(0)
+const stars = new Array(35).fill(0)
 const starStyle = []
 stars.forEach(star => starStyle.push({ top: `${Math.floor(Math.random() * 100)}%`, left: `${Math.floor(Math.random() * 100)}%` }))
 </script>
 
 <template>
-  <div class="h-screen w-screen -top-[40rem] -left-[30rem] absolute">
+  <div class="h-screen w-screen bg-nosferatu -top-[40rem] -left-[30rem] absolute">
   </div>
-  <div class="w-screen h-screen fixed font-bold text-dracula text-10xl flex items-center justify-center">
-    <div class="absolute z-50 -ml-24 -mt-24">
+  <div class="w-screen h-screen bg-nosferatu fixed font-bold text-dracula text-10xl flex items-center justify-center">
+    <a class="top-36 z-40 absolute text-dracula text-2xl font-semibold" @click="router.back()">
+      The page you are looking for cannot be found.
+    </a>
+    <div class="z-50 relative">
       <div class="moon">
         <div class="shade"></div>
       </div>
@@ -22,7 +25,7 @@ stars.forEach(star => starStyle.push({ top: `${Math.floor(Math.random() * 100)}%
     <p class="absolute z-40 text-center">
       4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4
     </p>
-    <a class="cursor-pointer absolute mt-64 bg-dracula px-6 py-2 text-aro rounded-md text-2xl font-semibold" @click="router.back()">
+    <a class="cursor-pointer z-40 bottom-36 absolute bg-dracula px-6 py-2 text-aro rounded-md text-2xl font-semibold" @click="router.back()">
       Back
     </a>
     <div v-for="(star, index) in stars" class="z-30 absolute rounded-full h-2 w-2 bg-lincoln" :style="starStyle[index]"></div>
@@ -31,7 +34,6 @@ stars.forEach(star => starStyle.push({ top: `${Math.floor(Math.random() * 100)}%
 
 <style scoped>
 .moon {
-  position: absolute;
   background: white;
   height: 100px;
   width: 100px;

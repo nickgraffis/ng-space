@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite-plugin-windicss'
 import colors from 'windicss/colors'
 import typography from 'windicss/plugin/typography'
+import animations from '@windicss/animations'
 
 export default defineConfig({
   extract: {
@@ -13,6 +14,16 @@ export default defineConfig({
   darkMode: 'class',
   plugins: [
     typography(),
+    animations({
+      settings: {
+        animatedSpeed: 1000,
+        heartBeatSpeed: 1000,
+        hingeSpeed: 2000,
+        bounceInSpeed: 750,
+        bounceOutSpeed: 750,
+        animationDelaySpeed: 300,
+      },
+    }),
   ],
   theme: {
     extend: {
@@ -53,6 +64,7 @@ export default defineConfig({
         blade: '#50fa7b',
         lincoln: '#f1fa8c',
         marcilin: '#ff5555',
+        vanHelsing: '#8be9fd',
       },
     },
   },

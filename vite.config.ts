@@ -61,7 +61,6 @@ export default defineConfig({
           permalinkSymbol: '#',
           permalinkAttrs: () => ({ 'aria-hidden': true }),
         })
-
         md.use(markdownAttr, {
           pattern: /^https?:/,
           attrs: {

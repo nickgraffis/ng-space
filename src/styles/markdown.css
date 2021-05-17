@@ -68,11 +68,11 @@ html.dark {
   a {
     font-weight: inherit;
     text-decoration: none;
-    border-bottom: 1px solid rgba(125,125,125,0.1);
+    border-bottom: 1px solid rgba(125,125,125,.75);
     transition: border .3s ease-in-out;
 
     &:hover { 
-      border-bottom: 1px solid var(--fg);
+      @apply border-b-\[1px\] border-dracula text-dracula
     }
   }
 
@@ -83,6 +83,10 @@ html.dark {
   hr {
     width: 50px;
     margin: 2em auto;
+  }
+
+  h1 {
+    @apply text-5xl lg:text-7xl md:text-7xl font-bold text-left w-full mb-6
   }
 }
 
@@ -157,3 +161,4 @@ h6:focus .header-anchor {
 .prose blockquote p:first-of-type::after {
   content: none;
 }
+
