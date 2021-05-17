@@ -15,7 +15,7 @@
     <circle fill="currentColor" class="group-hover:text-vanHelsing text-gray-500" cx="7" cy="3" r="2" />
     <circle fill="currentColor" class="group-hover:text-vanHelsing text-gray-500" cx="3" cy="8" r="3" />
     <circle fill="currentColor" class="group-hover:text-vanHelsing text-gray-500" cx="3" cy="4" r="3" />
-    <path fill="currentColor" class="group-hover:text-cullen text-gray-300" d="M36 18c0 9.941-8.059 18-18 18S0 27.941 0 18S8.059 0 18 0s18 8.059 18 18" />
+    <path fill="currentColor" class="dark:group-hover:text-cullen group-hover:text-cream text-gray-300" d="M36 18c0 9.941-8.059 18-18 18S0 27.941 0 18S8.059 0 18 0s18 8.059 18 18" />
     <circle fill="currentColor" class="group-hover:text-vanHelsing text-gray-500" cx="30.5" cy="4.5" r="2.5" />
     <circle fill="currentColor" class="group-hover:text-vanHelsing text-gray-500" cx="32" cy="7" r="2" />
     <circle fill="currentColor" class="group-hover:text-vanHelsing text-gray-500" cx="5.5" cy="4.5" r="2.5" />
