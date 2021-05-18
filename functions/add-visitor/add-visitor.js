@@ -5,11 +5,13 @@ const handler = async(event) => {
     if (event.httpMethod !== 'POST') return { statusCode: 405, body: 'Method Not Allowed' }
     const base = require('airtable').base('appSUgTUjToRLm1p2')
     const params = q.parse(event.body)
-    const subject = params.table
+    console.log(params)
     const records = {}
     const airtable = await base('Visitors').create(JSON.parse(params.create))
+    console.log(airtable)
     records.data = airtable.map(at => at._rawJson)
     records.recordsCreated = airtable.length
+    console.log(records)
     return {
       statusCode: 200,
       body: JSON.stringify(records),
