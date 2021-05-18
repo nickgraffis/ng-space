@@ -1,22 +1,14 @@
-const q = require('querystring')
 const Airtable = require('airtable')
 
 const handler = async(event) => {
   try {
     if (event.httpMethod !== 'POST') return { statusCode: 405, body: 'Method Not Allowed' }
-    console.log(process.env.AIRTABLE_API_KEY)
     const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base('appSUgTUjToRLm1p2')
-    const params = q.parse(event.body)
-    console.log(params)
     const records = {}
-    const airtable = await base('Visitors').create(params)
-    console.log(airtable)
-    records.data = airtable.map(at => at._rawJson)
-    records.recordsCreated = airtable.length
-    console.log(records)
+    const airtable = await base('Visitors').create(JSON.parse(event.body))
     return {
       statusCode: 200,
-      body: JSON.stringify(records),
+      body: 'thanks!',
       // // more keys you can return:
       // headers: { "headerName": "headerValue", ... },
       // isBase64Encoded: true,
