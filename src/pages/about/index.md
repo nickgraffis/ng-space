@@ -1,4 +1,7 @@
-# Nick Graffis
+---
+title: Nick Graffis
+---
+
 I am a full time software engineer from Long Beach, Calif. Currently working remotly from San Fransisco, San Diego, or Los Angeles.
 
 I work at [**Model Match**](https://modelmatch.com) where I help create and maintain software that quickly brings huge amounts of data to people in an easy, intuitive, and digestable way. At [**Model Match**](https://modelmatch.com), I'm really passionate about making things run _faster_ and improving workflow for myself and my team ⚡️. I love making improvements on the margin and gracefully handeling edge cases.

@@ -1,4 +1,6 @@
-# My Stack
+---
+title: My Tech Stack
+---
 
 ## TypeScript/JavaScript
 I curretly am working a lot with Javascript. I work on projects using Angular, React, Vue, and Svelte. They are all pretty awesome and I'm not sure what I like best. Within this I work with a ton of great libraries and tools including, WebPack, Vite, RxJs, Apollo, React-Query, and more. 

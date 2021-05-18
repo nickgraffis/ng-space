@@ -48,7 +48,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-md
     Markdown({
       wrapperComponent: 'post',
-      wrapperClasses: 'prose m-auto',
+      wrapperClasses: 'prose w-full',
       headEnabled: true,
       markdownItOptions: {
         quotes: '""\'\'',
@@ -59,7 +59,6 @@ export default defineConfig({
           permalink: true,
           permalinkBefore: true,
           permalinkSymbol: '#',
-          permalinkAttrs: () => ({ 'aria-hidden': true }),
         })
         md.use(markdownAttr, {
           pattern: /^https?:/,

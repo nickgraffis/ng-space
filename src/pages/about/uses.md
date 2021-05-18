@@ -1,4 +1,7 @@
-# My Day to Day Uses
+---
+title: My Uses
+---
+
 ## Workstation set up
 * Macbook Pro 16in - I actually just had my laptop stolen in January of 2021, so my new laptop is a replacement of that and I love it.
 * 2 LG 27in Monitors

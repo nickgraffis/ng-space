@@ -19,3 +19,5 @@ declare module '*.vue' {
 }
 
 declare module '@windicss/animations';
+
+declare module 'diacritics';

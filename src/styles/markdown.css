@@ -60,6 +60,10 @@ html.dark {
 
 .prose {
 
+  img {
+    @apply rounded-md
+  }
+
   a {
     font-weight: inherit;
     text-decoration: none;
