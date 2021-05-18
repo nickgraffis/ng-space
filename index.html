@@ -26,7 +26,7 @@
       fetch('https://api.db-ip.com/v2/free/self').then(
         res => res.json().then(
           (res) => {
-            fetch('/api/add-visitor', {
+            fetch('/.netlify/functions/add-visitor', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
