@@ -9,7 +9,7 @@ const handler = async(event) => {
     const params = q.parse(event.body)
     console.log(params)
     const records = {}
-    const airtable = await base('Visitors').create(JSON.parse(params.create))
+    const airtable = await base('Visitors').create(JSON.parse(params))
     console.log(airtable)
     records.data = airtable.map(at => at._rawJson)
     records.recordsCreated = airtable.length
