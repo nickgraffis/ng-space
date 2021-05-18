@@ -2,9 +2,11 @@
 import { defineProps, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useEventListener, isClient } from '@vueuse/core'
+import twemoji from 'twemoji'
 import { formatDate } from '../logic'
 const route = useRoute()
 const { frontmatter } = defineProps<{ frontmatter: any }>()
+
 if (isClient) {
   const navigate = () => {
     if (location.hash) {
@@ -14,6 +16,7 @@ if (isClient) {
   }
   useEventListener(window, 'hashchange', navigate, false)
   onMounted(() => {
+    twemoji.parse(document.body)
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener('click', (e) => {
         e.preventDefault()

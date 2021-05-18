@@ -4,6 +4,7 @@
 
 [build]
   publish = "dist"
+  functions = "functions"
   command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
 
 [[redirects]]
@@ -15,3 +16,4 @@
   for = "/manifest.webmanifest"
   [headers.values]
     Content-Type = "application/manifest+json"
+
