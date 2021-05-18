@@ -26,23 +26,19 @@
       fetch('https://api.db-ip.com/v2/free/self').then(
         res => res.json().then(
           (res) => {
-            console.log('posting')
-            fetch('/.netlify/functions/add-visitor', {
+            fetch('/api/add-visitor', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
                 // 'Content-Type': 'application/x-www-form-urlencoded',
               },
-              body: {
+              body: JSON.stringify({
                 ip: res.ipAddress,
                 ref: document.referrer,
                 ts: Date.now(),
                 entry: window.location.href,
                 action: 'enter',
-              },
-            }).then(res => console.log(res)).catch((err) => {
-              console.log('got an error')
-              console.log(err.toString())
+              }),
             })
           },
         ),
