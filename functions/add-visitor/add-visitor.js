@@ -4,6 +4,7 @@ const Airtable = require('airtable')
 const handler = async(event) => {
   try {
     if (event.httpMethod !== 'POST') return { statusCode: 405, body: 'Method Not Allowed' }
+    console.log(process.env.AIRTABLE_API_KEY)
     const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base('appSUgTUjToRLm1p2')
     const params = q.parse(event.body)
     console.log(params)
