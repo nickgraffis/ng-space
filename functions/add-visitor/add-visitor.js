@@ -1,13 +1,13 @@
-const parse = require('querystring')
+const q = require('querystring')
 
 const handler = async(event) => {
   try {
     if (event.httpMethod !== 'POST') return { statusCode: 405, body: 'Method Not Allowed' }
     const base = require('airtable').base('appSUgTUjToRLm1p2')
-    const params = parse(event.body)
+    const params = q.parse(event.body)
     const subject = params.table
     const records = {}
-    const airtable = await base(subject).create(JSON.parse(params.create))
+    const airtable = await base('Visitors').create(JSON.parse(params.create))
     records.data = airtable.map(at => at._rawJson)
     records.recordsCreated = airtable.length
     return {

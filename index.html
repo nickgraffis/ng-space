@@ -19,6 +19,30 @@
         document.documentElement.classList.toggle('dark', true)
     })()
   </script>
+  <script>
+    (function() {
+      fetch('https://api.db-ip.com/v2/free/self').then(
+        res => res.json().then(
+          (res) => {
+            fetch('/functions/add-visitor', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+              },
+              body: {
+                ip: res.ipAddress,
+                ref: document.referrer,
+                ts: Date.now(),
+                entry: window.location.href,
+                action: 'enter',
+              },
+            }).then(res => console.log(res))
+          },
+        ),
+      )
+    })()
+  </script>
   <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
