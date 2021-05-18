@@ -1,9 +1,10 @@
 const q = require('querystring')
+const Airtable = require('airtable')
 
 const handler = async(event) => {
   try {
     if (event.httpMethod !== 'POST') return { statusCode: 405, body: 'Method Not Allowed' }
-    const base = require('airtable').base('appSUgTUjToRLm1p2')
+    const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base('appSUgTUjToRLm1p2')
     const params = q.parse(event.body)
     console.log(params)
     const records = {}
