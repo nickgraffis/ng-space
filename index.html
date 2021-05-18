@@ -26,6 +26,7 @@
       fetch('https://api.db-ip.com/v2/free/self').then(
         res => res.json().then(
           (res) => {
+            console.log('posting')
             fetch('/.netlify/functions/add-visitor', {
               method: 'POST',
               headers: {
@@ -40,6 +41,7 @@
                 action: 'enter',
               },
             }).then(res => console.log(res)).catch((err) => {
+              console.log('got an error')
               console.log(err.toString())
             })
           },
