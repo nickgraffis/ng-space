@@ -33,22 +33,22 @@ html:not(.dark) {
 }
 
 html.dark {
-  --prism-foreground: #d4cfbf;
-  --prism-background: #111111;
-  --prism-comment: #758575;
-  --prism-string: #d48372;
-  --prism-literal: #429988;
-  --prism-keyword: #4d9375;
-  --prism-boolean: #1c6b48;
-  --prism-number: #6394bf;
-  --prism-variable: #c2b36e;
-  --prism-function: #a1b567;
+  --prism-foreground: #f8f8f2;
+  --prism-background: #44475a;
+  --prism-comment: #6272a4;
+  --prism-string: #f1fa8c;
+  --prism-literal: #f1fa8c;
+  --prism-keyword: #ff79c6;
+  --prism-boolean: #bd93f9;
+  --prism-number: #bd93f9;
+  --prism-variable: #bd93f9;
+  --prism-function: #50fa7b;
   --prism-deleted: #a14f55;
-  --prism-class: #54b1bf;
-  --prism-builtin: #e0a569;
-  --prism-property: #dd8e6e;
-  --prism-namespace: #db889a;
-  --prism-punctuation: #858585;
+  --prism-class: #8be9fd;
+  --prism-builtin: #ff79c6;
+  --prism-property: #8be9fd;
+  --prism-namespace: #8be9fd;
+  --prism-punctuation: #f8f8f2;
   --prism-decorator: #bd8f8f;
   --prism-regex: #ab5e3f;
   --prism-json-property: #6b8b9e;
@@ -67,7 +67,7 @@ html.dark {
     transition: all .3s ease-in-out;
 
     &:hover { 
-      @apply border-b-\[1px\] border-[#863FE9] text-[#863FE9]
+    @apply border-b-\[1px\] opacity-100 dark:border-dracula border-draculaDark dark:text-dracula text-draculaDark
     }
   }
 
@@ -98,7 +98,7 @@ a.item {
   opacity: 0.6;
 
   &:hover {
-    @apply border-b-\[1px\] opacity-100 dark:border-dracula border-draculaDark dark:text-dracula text-draculaDark
+    @apply opacity-100 dark:border-dracula border-draculaDark dark:text-dracula text-draculaDark
   }
 }
 
@@ -139,6 +139,7 @@ h6:focus .header-anchor {
   line-height: 1.5em;
   padding: 0.6em 1.2em;
   opacity: 0.8;
+  @apply dark:text-cullen text-nosferatu;
 }
 
 .prose blockquote > :first-child {
