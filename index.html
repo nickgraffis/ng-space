@@ -12,6 +12,7 @@
 <body>
   <div id="app"></div>
   <script>
+    /* Check prefere color scheme **/
     (function() {
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
       const setting = localStorage.getItem('color-schema') || 'auto'
@@ -20,6 +21,7 @@
     })()
   </script>
   <script>
+    /* Analyitics script **/
     (function() {
       fetch('https://api.db-ip.com/v2/free/self').then(
         res => res.json().then(
