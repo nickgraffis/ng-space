@@ -34,7 +34,7 @@ html:not(.dark) {
 
 html.dark {
   --prism-foreground: #f8f8f2;
-  --prism-background: #44475a;
+  --prism-background: rgb(31, 30, 38);
   --prism-comment: #6272a4;
   --prism-string: #f1fa8c;
   --prism-literal: #f1fa8c;
@@ -69,7 +69,11 @@ html.dark {
  }
 
   img {
-    @apply rounded-md
+    @apply rounded-md max-h-96 object-cover object-top w-full
+  }
+
+  figure {
+    @apply p-0 m-0
   }
 
   a {

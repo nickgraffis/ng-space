@@ -21,3 +21,4 @@ declare module '*.vue' {
 declare module '@windicss/animations';
 declare module 'diacritics';
 declare module 'twemoji';
+declare module 'markdown-it-link-attributes';

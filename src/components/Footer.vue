@@ -74,6 +74,7 @@ const toggleLocales = (event: Event) => {
         <div class="dark:bg-dracula bg-draculaDark h-4 w-4 rounded-full"></div>
         <div class="dark:bg-marcilin bg-marcilin h-4 w-4 rounded-full"></div>
         <div class="dark:bg-vanHelsing bg-vanHelsingDark h-4 w-4 rounded-full"></div>
+        <div class="dark:bg-lincoln bg-lincolnDark h-4 w-4 rounded-full"></div>
       </div>
       <div class="flex-grow-0">
         <form>

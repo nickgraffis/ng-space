@@ -23,3 +23,5 @@
 - 🖨 Server-side generation (SSG) via [vite-ssg](https://github.com/antfu/vite-ssg)
 
 - 🦾 TypeScript
+
+This started as an implementation of [Vitisse](https://github.com/antfu/vitesse)

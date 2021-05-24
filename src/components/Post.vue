@@ -31,7 +31,7 @@ if (isClient) {
 }
 </script>
 <template>
-  <div v-if="frontmatter.title" class="prose text-left w-full mb-6">
+  <div v-if="frontmatter.title && frontmatter.title !== 'Blog' && frontmatter.title !== '<3'" class="prose text-left w-full mb-6">
     <h1>
       {{ frontmatter.title }}
     </h1>

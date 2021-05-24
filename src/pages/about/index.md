@@ -12,4 +12,4 @@ Outside of prgramming I love surfing, food, wine, [water polo](/about/waterpolo)
 
 <hr>
 
-You can reach me anytime at [n@nickgraffis.space]().
+You can reach me anytime at [hi@nickgraffis.me]().

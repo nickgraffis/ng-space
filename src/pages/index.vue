@@ -49,7 +49,7 @@ const { t } = useI18n()
       <h1 class="text-lg text-left w-full text-nosferatu dark:text-cullen font-medium mb-4 mt-6">
         {{ t(`timeline`) }}
       </h1>
-      <Timeline :length="6" />
+      <Timeline :length="4" />
       <div class="w-full cursor-pointer flex items-center justify-center space-x-2" @click="router.push(`/events`)">
         <span class="text-dracula text-xs font-semibold tracking-wider uppercase">{{ t(`see-full-timeline`) }}</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-dracula inline-flex" viewBox="0 0 20 20" fill="currentColor">

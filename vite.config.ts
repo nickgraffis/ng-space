@@ -45,7 +45,13 @@ export default defineConfig({
         if (!p.includes('projects.md')) {
           const md = fs.readFileSync(p, 'utf-8')
           const { data } = matter(md)
-          route.meta = Object.assign(route.meta || {}, { frontmatter: data })
+          const string = md.split('')
+          const length = string.length
+          const words = length / 6.7
+          const min = words / 200
+          const frontmatter = data
+          frontmatter.duration = `${Math.ceil(min)} min read`
+          route.meta = Object.assign(route.meta || {}, { frontmatter })
         }
 
         return route
@@ -110,8 +116,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
+        name: 'Nick Graffis',
+        short_name: 'nickgraffis',
         theme_color: '#ffffff',
         icons: [
           {

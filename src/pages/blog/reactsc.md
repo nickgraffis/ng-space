@@ -3,13 +3,43 @@ title: React TypeScript CheatSheet
 date: 2021-05-15T16:00:00Z
 lang: en
 duration: 5min
-description: Created this fun static site with Vite, Vue, and some other fun stuff.
+description: Here are a couple examples of some common react/typescript patterns for reference.
 icon: bx-bx-atom
 ---
+> _**⚠️ A Living Document - I'll keep adding to it as it comes up!**_
+## Functional Components
+```js
+type Props = { 
+    children?: ReactNode,
+    example?: String
+}
 
-# NickGraffis.Space
+export const StronglyTypedComponent: FC<Props> = () => { 
+    return (
+        <p>Strongly typed!</p>
+    )
+}
+```
 
-Hey! My goal in creating my personal website was to provide a great, real world excersise for me to learn about some awesome technologies, and to provide a canvas for me to showcase a little about me and my thoughts.
+## Context Hooks
 
-## So for the first part, the techside.
-This site is built with Vite, Vue, and Vite SSG. It's deployed on Netlify.
+```js
+/** Provider */
+export type AccountContextType = {
+  account: any;
+  setAccount: (Account: any) => void;
+}
+
+export const AccountContext = React.createContext<AccountContextType>(
+  { 
+    account: '', 
+    setAccount: account => console.warn('no account provider')
+  }
+);
+
+export const useCurrentAccount = () => useContext(AccountContext);
+
+/** Consumer */
+const { account, setAccount } = useCurrentAccount();
+
+```

@@ -12,27 +12,4 @@ Hey! My goal in creating my personal website was to provide a great, real world 
 
 ![Lighthouse results for my site](/lighthouse.png "Lighthouse results for my site")
 
-I really took care to make sure that I was creating something that left no stone unturned. I wanted a fast site, that did what it set out to do, well. We can take a look category by category to see why each score is so high, and what tech is behind it. _And who helped me, because there is a lot of that_.
-
-## Performance
-Google Lighthouse explains how they score for performance in a [great article](https://web.dev/performance-scoring/?utm_source=lighthouse&utm_medium=devtools). For me, it seems like the biggest thing we are looking at is speed, and this is occuring because you are looking at a static site. It takes about 300ms to get this page loaded in a meaningful way. 
-
-You're actually reading what I wrote into a markdown file right now. But thanks so some awesome tools, [vite markdown plugin](https://github.com/antfu/vite-plugin-md) and [vite-ssg]() all of the content is rendered into html at build time. So unlike a normal Vue application, this site moves much faster. 
-
-## Accessibility
-
-## Best Practices
-
-## SEO
-
-## Maintainability
-When building this, I knew I wanted to make sure that it was something I could add too quickly. If I had to spend an hour pushing up a new blog post, or minuets waiting for builds and reloads to change some css, it wouldn't get done. And what would be the point of the site then, if it never gets updated?
-
-## File based routing
-
-## Markdown rendering
-
-## The hang ups
-Obviously, this isn't perfect. And I'm open to any suggestions you may have! Here are a few known issues that I have found:
-
-## Additonal features
+I really took care to make sure that I was creating something that left no stone unturned. I wanted a fast site, that did what it set out to do, well. _**There is always room for improvement, let me know if there is something off!**_.

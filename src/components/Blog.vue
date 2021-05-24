@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { formatDate } from '../../logic'
+import { formatDate } from '../logic'
 const lang = ref('en')
 const router = useRouter()
 const routes = router.getRoutes().filter((route: any) => route.meta.frontmatter?.date)
