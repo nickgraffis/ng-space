@@ -45,11 +45,11 @@ html.dark {
   --prism-function: #50fa7b;
   --prism-deleted: #a14f55;
   --prism-class: #8be9fd;
-  --prism-builtin: #ff79c6;
+  --prism-builtin: #8be9fd;
   --prism-property: #8be9fd;
   --prism-namespace: #8be9fd;
   --prism-punctuation: #f8f8f2;
-  --prism-decorator: #bd8f8f;
+  --prism-decorator: #8be9fd;
   --prism-regex: #ab5e3f;
   --prism-json-property: #6b8b9e;
   --prism-line-number: #888888;
@@ -67,6 +67,14 @@ html.dark {
     vertical-align: -0.1rem;
     display: inline;
  }
+
+ .timeline-stick {
+   margin-top: 1rem;
+ }
+
+ .timeline-event {
+  margin-top: -1rem;
+}
 
   img {
     @apply rounded-md max-h-96 object-cover object-top w-full
@@ -114,7 +122,7 @@ a.item {
   opacity: 0.6;
 
   &:hover {
-    @apply opacity-100 dark:border-dracula border-draculaDark dark:text-dracula text-draculaDark
+    @apply opacity-100 dark:border-dracula border-draculaDark dark:text-dracula text-draculaDark cursor-pointer
   }
 }
 

@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 import { useRouter } from 'vue-router'
-import Clown from './Icons/Clown.vue'
-import DB from './Icons/DB.vue'
-import VampireHover from './Icons/VampireHover.vue'
-import Hadena from './Icons/Hadena.vue'
 const props = defineProps({
   length: {
     type: Number,
@@ -18,7 +14,12 @@ const projects: any = router.getRoutes().filter((route: any) => route.meta.front
 </script>
 <template>
   <div class="grid grid-cols-4 gap-4">
-    <div v-for="project in projects" :key="project.meta.frontmatter.order" :class="project.meta.frontmatter.size" class="group col-span-4 cursor-pointer rounded-md dark:border-cullen border-nosferatu border-2 flex-col flex space-y-4 items-center justify-center p-4">
+    <div
+      v-for="project in projects"
+      :key="project.meta.frontmatter.order"
+      :class="project.meta.frontmatter.size"
+      class="group col-span-4 cursor-pointer rounded-md dark:border-cullen border-nosferatu border-2 flex-col flex space-y-4 items-center justify-center p-4"
+    >
       <Clown v-if="project.meta.frontmatter.icon === 'Clown'" />
       <DB v-else-if="project.meta.frontmatter.icon === 'DB'" />
       <VampireHover v-else-if="project.meta.frontmatter.icon === 'VampireHover'" />

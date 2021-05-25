@@ -8,7 +8,7 @@ icon: bx-bx-atom
 ---
 > _**⚠️ A Living Document - I'll keep adding to it as it comes up!**_
 ## Functional Components
-```js
+```ts
 type Props = { 
     children?: ReactNode,
     example?: String
@@ -23,7 +23,7 @@ export const StronglyTypedComponent: FC<Props> = () => {
 
 ## Context Hooks
 
-```js
+```ts
 /** Provider */
 export type AccountContextType = {
   account: any;

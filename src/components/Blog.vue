@@ -20,7 +20,7 @@ const posts: any = computed(() =>
       :to="route.path"
     >
       <li class="no-underline flex space-x-8">
-        <Icon class="text-3xl opacity-75" :icon="route.meta.frontmatter.icon || 'carbon:unknown'" />
+        <Icon class="text-3xl opacity-75 flex-shrink-0" :icon="route.meta.frontmatter.icon || 'carbon:unknown'" />
         <div class="group">
           <div class="text-lg">
             {{ route.meta.frontmatter.title }}

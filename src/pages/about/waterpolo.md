@@ -9,23 +9,41 @@ I am currently the Head Coach of Mens and Womens Water Polo at <span style="colo
 ## Junior Olympic Champions MMXVIII
 <figure>
     <img src="/17jos.jpg" alt="2017 Junior Olympic 10&Under Coed Champions">
-  <figcaption>2017 Junior Olympic 10&Under Coed Champions</figcaption>
+  <figcaption>2017 Junior Olympic 10&Under Coed Champions - Matt Robert, Laura Huynh & Myself</figcaption>
 </figure>
 
 ## CIF-SS Divison IV Semifinalists MMXX
-![2020 CIF-SS Divison IV Semifinalists](/edison.png "2020 CIF-SS Divison IV Semifinalists")
+<figure>
+    <img src="/edison.png" alt="2020 CIF-SS Divison IV Semifinalists">
+  <figcaption>2020 CIF-SS Divison IV Semifinalists - Kyle Cenicola, Chaz Harker, Laura Huynh & Myself</figcaption>
+</figure>
 
 ## Junior Olympic Runners Up MMXIX
-![2019 Junior Olympic 10&Under Coed Runners Up](/18jos.jpg "2018 Junior Olympic 10&Under Coed Runners Up")
+<figure>
+    <img src="/18jos.jpg" alt="2018 Junior Olympic 10&Under Coed Runners Up">
+  <figcaption>2018 Junior Olympic 10&Under Coed Runners Up - Matt Robert, Laura Huynh, & Myself</figcaption>
+</figure>
 
 ## Junior Olympic Runners Up MMXVIII
-![2018 Junior Olympic 10&Under Girls Runners Up](/girls18jo.png "2018 Junior Olympic 10&Under Girls Runners Up")
+<figure>
+    <img src="/girls18jo.png" alt="2017 Junior Olympic 10&Under Girls Runners Up">
+  <figcaption>2017 Junior Olympic 10&Under Coed Runners Up - Laura Huynh & Myself</figcaption>
+</figure>
 
 ## Junior Olympic Branoze Medalists MMXVII
-![2017 Junior Olympic 10&Under Girls Bronze Medalists](/girls3rd.jpg "2018 Junior Olympic 10&Under Coed Runners Up")
+<figure>
+    <img src="/girls3rd.jpg" alt="2016 Junior Olympic 10&Under Girls Bronze Medalists">
+  <figcaption>2016 Junior Olympic 10&Under Girls Bronze Medalists - Laura Huynh & Myself</figcaption>
+</figure>
 
 ## CIF-SS Division I Runners Up MMXVI
-![2016 CIF-SS Division I Runners Up](/hbhs.jpeg "2016 CIF-SS Division I Runners Up")
+<figure>
+    <img src="/hbhs.jpeg" alt="2016 CIF-SS Division I Runners Up">
+  <figcaption>2016 CIF-SS Division I Runners Up - Sasa Branisavljevic, Djoko Radunovic, Chris Kaps, Chase Cameron, Chaz Harker & Myself</figcaption>
+</figure>
 
 ## UCI Southwestern Divison Runners Up and National Semifinalists MMXV
-![2015 UCI Southwestern Divison Runners Up and National Semifinalists](/uci.jpg "UCI Southwestern Divison Runners Up and National Semifinalists")
+<figure>
+    <img src="/uci.jpg" alt="2015 UCI Southwestern Divison Runners Up and National Semifinalists">
+  <figcaption>2015 UCI Southwestern Divison Runners Up and National Semifinalists - Brandon Nguyen & Myself</figcaption>
+</figure>

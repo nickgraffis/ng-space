@@ -14,14 +14,14 @@ const events: any = router.getRoutes().filter((route: any) => route.meta.frontma
   .splice(0, props.length || router.getRoutes().filter((route: any) => route.meta.frontmatter?.color).length)
 </script>
 <template>
-  <ul class="w-full space-y-12">
-    <li v-for="(event, index) in events" :key="event.meta.frontmatter.date" class="relative">
+  <div class="w-full space-y-12 timeline">
+    <div v-for="(event, index) in events" :key="event.meta.frontmatter.date" class="relative">
       <div
         style="z-index: 1;"
-        class="absolute w-0.5 dark:bg-cullen bg-nosferatu rounded-sm mt-1 left-4 -ml-px h-24"
+        class="absolute timeline-stick w-0.5 dark:bg-cullen bg-nosferatu rounded-sm mt-1 left-4 -ml-px h-24"
         :class="[index === events.length - 1 ? 'hidden': '']"
       />
-      <div style="z-index: 1;" class="flex w-full items-center relative space-x-4 lg:text-sm text-xs">
+      <div style="z-index: 1;" class="flex w-full items-center relative space-x-4 lg:text-sm text-xs timeline-event">
         <div :class="event.meta.frontmatter.color" class="text-cullen dark:text-aro rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0">
           <Icon :icon="event.meta.frontmatter.icon" />
         </div>
@@ -32,6 +32,6 @@ const events: any = router.getRoutes().filter((route: any) => route.meta.frontma
           {{ formatDate(event.meta.frontmatter.date) }}
         </p>
       </div>
-    </li>
-  </ul>
+    </div>
+  </div>
 </template>

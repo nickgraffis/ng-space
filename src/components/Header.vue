@@ -61,29 +61,29 @@ const flipAvatar = () => {
           <akar-icons:chevron-right class="transition-all duration-300 h-4 w-4 transform dark:group-hover:text-dracula group-hover:text-draculaDark" :class="{ 'rotate-90': dropAbout }" />
         </div>
         <div
-          v-if="dropAbout"
-          class="rounded-md absolute top-8 right-0 transition-all duration-300 z-50 px-2 overflow-hidden"
+          class="rounded-md absolute top-8 right-0 transition-all duration-300 z-50 px-2 overflow-hidden transform origin-top-right"
+          :class="[dropAbout ? 'scale-100 opacity-100' : 'scale-0 opacity-0']"
         >
           <ul class="space-y-2 text-left bg-cullen dark:bg-aro w-36 rounded-md p-1">
-            <li class="flex space-x-2 items-center transition-colors duration-300 dark:hover:text-cullen hover:text-draculaDark rounded-md p-1 hover:dark:bg-dracula cursor-pointer" @click="to('/about')">
+            <li class="flex space-x-2 items-center transition-colors duration-300 dark:hover:text-nosferatu hover:text-draculaDark rounded-md p-1 hover:dark:bg-dracula cursor-pointer" @click="to('/about')">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span>{{ t(`just-me`) }}</span>
             </li>
-            <li class="flex space-x-2 items-center transition-colors duration-300 dark:hover:text-cullen hover:text-draculaDark rounded-md p-1 hover:dark:bg-dracula cursor-pointer" @click="to('/about/techstack')">
+            <li class="flex space-x-2 items-center transition-colors duration-300 dark:hover:text-nosferatu hover:text-draculaDark rounded-md p-1 hover:dark:bg-dracula cursor-pointer" @click="to('/about/techstack')">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
               <span>{{ t(`tech-stack`) }}</span>
             </li>
-            <li class="flex space-x-2 items-center transition-colors duration-300 dark:hover:text-cullen hover:text-draculaDark rounded-md p-1 hover:dark:bg-dracula cursor-pointer" @click="to('/about/uses')">
+            <li class="flex space-x-2 items-center transition-colors duration-300 dark:hover:text-nosferatu hover:text-draculaDark rounded-md p-1 hover:dark:bg-dracula cursor-pointer" @click="to('/about/uses')">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               <span>{{ t(`uses`) }}</span>
             </li>
-            <li class="flex space-x-2 items-center transition-colors duration-300 dark:hover:text-cullen hover:text-draculaDark rounded-md p-1 hover:dark:bg-dracula cursor-pointer" @click="to('/about/waterpolo')">
+            <li class="flex space-x-2 items-center transition-colors duration-300 dark:hover:text-nosferatu hover:text-draculaDark rounded-md p-1 hover:dark:bg-dracula cursor-pointer" @click="to('/about/waterpolo')">
               <la-volleyball-ball />
               <span>{{ t(`water-polo`) }}</span>
             </li>
