@@ -48,7 +48,7 @@ export default defineConfig({
         },
       },
       colors: {
-        dracula: '#BF95F9',
+        dracula: '#9580FF',
         draculaDark: '#863FE9',
         buffy: '#FF7AC6',
         buffyDark: '#F20D8F',
@@ -56,7 +56,7 @@ export default defineConfig({
         vonCountDark: '#414D71',
         cullen: '#f8f8f2',
         aro: '#44475a',
-        nosferatu: '#282a36',
+        nosferatu: '#22212C',
         morbius: '#ffb86c',
         morbiusDark: '#FF901A',
         blade: '#50fa7b',

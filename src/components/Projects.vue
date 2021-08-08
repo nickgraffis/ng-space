@@ -13,25 +13,24 @@ const projects: any = router.getRoutes().filter((route: any) => route.meta.front
   .splice(0, props.length || router.getRoutes().filter((route: any) => route.meta.frontmatter?.tech).length)
 </script>
 <template>
-  <div class="grid grid-cols-4 gap-4">
+  <div class="grid grid-cols-2 gap-1">
     <div
       v-for="project in projects"
       :key="project.meta.frontmatter.order"
-      :class="project.meta.frontmatter.size"
-      class="group col-span-4 cursor-pointer rounded-md dark:border-cullen border-nosferatu border-2 flex-col flex space-y-4 items-center justify-center p-4"
+      class="group col-span-1 cursor-pointer rounded-md flex-col flex space-y-4 p-4"
     >
-      <Clown v-if="project.meta.frontmatter.icon === 'Clown'" />
-      <DB v-else-if="project.meta.frontmatter.icon === 'DB'" />
-      <VampireHover v-else-if="project.meta.frontmatter.icon === 'VampireHover'" />
-      <Hadena v-else />
       <div>
-        <p class="font-semibold text-center">
-          {{ project.meta.frontmatter.title }}
-        </p>
-        <p class="text-sm pb-2 text-center">
+        <div class="font-semibold text-center flex space-x-4 pb-2 text-xl items-baseline">
+          <Clown v-if="project.meta.frontmatter.icon === 'Clown'" />
+          <DB v-else-if="project.meta.frontmatter.icon === 'DB'" />
+          <VampireHover v-else-if="project.meta.frontmatter.icon === 'VampireHover'" />
+          <Hadena v-else />
+          <div>{{ project.meta.frontmatter.title }}</div>
+        </div>
+        <div class="text-sm pb-2">
           {{ project.meta.frontmatter.description }}
-        </p>
-        <div class="flex space-x-2 items-center justify-center">
+        </div>
+        <div class="flex space-x-2">
           <Icon
             v-for="(tech, index) in project.meta.frontmatter.tech"
             :key="index"

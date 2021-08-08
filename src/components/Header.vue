@@ -26,11 +26,13 @@ const flipAvatar = () => {
   const avatarEl: HTMLElement | null = document.querySelector('#avatar') as HTMLElement
   if (avatarEl) {
     avatarEl.classList.add('rotate-360')
+    avatarEl.classList.add('scale-150')
     avatarEl.style.filter = 'blur(10px)'
     setTimeout(() => {
       index = index < 6 ? index + 1 : 0
       avatar.value = avatars[index]
       avatarEl.classList.remove('rotate-360')
+      avatarEl.classList.remove('scale-150')
       avatarEl.style.filter = ''
     }, 500)
   }
