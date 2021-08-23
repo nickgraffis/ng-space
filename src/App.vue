@@ -1,17 +1,22 @@
 <script setup lang="ts">
-import { useHead } from '@vueuse/head'
+  import { useHead } from '@vueuse/head'
+  import { openFunConsole } from './logics' 
 
-// https://github.com/vueuse/head
-// you can use this to manipulate the document head in any components,
-// they will be rendered correctly in the html results with vite-ssg
-useHead({
-  title: 'Nick Graffis',
-  meta: [
-    { name: 'description', content: 'Nick Graffis\'s Personal Website' },
-  ],
-})
-</script>
-
-<template>
-  <router-view />
-</template>
+  // https://github.com/vueuse/head
+  useHead({
+    title: 'Nick Graffis',
+    meta: [
+      { name: 'description', content: 'Nick Graffis\'s Personal Website' },
+    ],
+  })
+  </script>
+  
+  <template>
+    <Alert>
+      <ThemeToggle> <!-- TODO: Rename to Keyboard Events && Add Another Componennt for ThemeToggle -->
+        <router-view />
+        <FunConsole v-if="openFunConsole" /> <!-- TODO: Rename FunConsle, and Improve significantly -->
+      </ThemeToggle>
+    </Alert>
+  </template>
+  
