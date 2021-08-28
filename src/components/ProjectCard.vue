@@ -19,26 +19,39 @@
 </template>
 
 <script setup lang="ts">
-  import axios from 'axios'
   import twemoji from 'twemoji'
-  const { get } = axios
-  const { project: { github, name, icon, description } } = defineProps<{ project: { github: string, name: string, icon: string, description: string} }>()
-  const repository = ref<any>(null)
-  const languages = ref<any>(null)
-  if (github) get(`https://api.github.com/repos/${encodeURI(github)}`, {
-    headers: {
-      'Authorization': 'token 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'
-    }
-  })
-  .then((repo) => repository.value = repo.data)
 
-  if (github) get(`https://api.github.com/repos/${encodeURI(github)}/languages`, {
-    headers: {
-      'Authorization': 'token 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'
-    }
-  })
-  .then((repo) => {
-    languages.value = repo.data
-  })
+  if (import.meta.env.SSR) {
+    import('../../../gitHubData.json').then(data => {
+      const { project: { github, name, icon, description } } = defineProps<{ project: { github: string, name: string, icon: string, description: string} }>()
+      const repository = ref<any>(data.repoData)
+      const languages = ref<any>(data.languageDAta)
+    })
+  }
+
+  if (import.meta.env.MODE === 'dev') {
+    import('axios').then(axios => {
+      const { get } = axios
+      const { project: { github, name, icon, description } } = defineProps<{ project: { github: string, name: string, icon: string, description: string} }>()
+      const repository = ref<any>(null)
+      const languages = ref<any>(null)
+
+      if (github) get(`https://api.github.com/repos/${encodeURI(github)}`, {
+        headers: {
+          'Authorization': import.meta.env.MODE === 'client' && `token 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`
+        }
+      })
+      .then((repo) => repository.value = repo.data)
+
+      if (github) get(`https://api.github.com/repos/${encodeURI(github)}/languages`, {
+        headers: {
+          'Authorization': import.meta.env.MODE === 'client' && `token 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`
+        }
+      })
+      .then((repo) => {
+        languages.value = repo.data
+      })
+    })
+  }
 
 </script>
